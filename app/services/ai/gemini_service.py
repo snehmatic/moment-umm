@@ -12,7 +12,6 @@ class GeminiService(LLMService):
         # The new SDK handles missing keys gracefully or raises errors when used
         if not settings.GEMINI_API_KEY:
             pass
-        print("Key: ", settings.GEMINI_API_KEY)
         self.client = genai.Client(api_key=settings.GEMINI_API_KEY)
         self.model_name = "gemini-2.0-flash"
 
